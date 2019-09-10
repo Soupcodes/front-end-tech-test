@@ -2,8 +2,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Steps to run the webapp
 
-`git clone <repository link>` onto your desktop through a terminal<br>
-`cd <repository name>` to access the folder<br>
+`git clone https://github.com/Soupcodes/front-end-tech-test.git` into a folder through a terminal<br>
+`cd front-end-tech-test` to access the folder<br>
 Open in your preferred IDE
 
 ## Run Scripts
