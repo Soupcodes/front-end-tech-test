@@ -19,5 +19,8 @@ This will download and install all relevant dependencies required to run the web
 Runs the app in the development mode.<br>
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits, otherwise, enjoy browsing the webapp and code!
-# front-end-tech-test
+### With extra time:
+
+With extra time, I would have liked to try building the pages in TypeScript, and CSS Styled Components as opposed to css modules.
+
+In terms of functionality and the code itself, I would have spent more time understanding how the carousel component is rendered, to be able to render a full product, description alongside the images in one component / card as opposed to splitting the logic which I am aware currently causes issues when trying to add a second object into products page.
