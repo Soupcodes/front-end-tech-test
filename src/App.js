@@ -32,7 +32,9 @@ function App() {
     cart.map(item => {
       if (item.product.quantity === 1) {
         const newCart = [];
+        item.product.quantity = 0;
         setCart(newCart);
+        setTotalCost(totalCost - item.product.price);
       }
       if (item.product.quantity > 1) {
         item.product.quantity--;
