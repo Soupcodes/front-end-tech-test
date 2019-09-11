@@ -1,7 +1,13 @@
 import React, { useState } from "react";
 import ProductCarousel from "../components/ProductCarousel";
 import products from "../assets/ProductsList";
-import styles from "./ProductsHomepage.module.css";
+import {
+  Button,
+  ProductCard,
+  ProductTitle,
+  MainBodyText,
+  ProductPrice
+} from "../components/PDPStyledComponents";
 
 const ProductsHomepage = ({ setTotalCost, addItem }) => {
   let [purchased, setPurchased] = useState(null);
@@ -11,16 +17,15 @@ const ProductsHomepage = ({ setTotalCost, addItem }) => {
   };
 
   return (
-    <div className={styles.product}>
-      <ProductCarousel className={styles.image} />
+    <ProductCard>
+      <ProductCarousel />
       {products.map(product => {
         return (
           <div key={product.title}>
-            <h2 className={styles.title}>{product.title}</h2>
-            <h4 className={styles.desc}>{product.description}</h4>
-            <h6 className={styles.price}>£{product.price}</h6>
-            <button
-              className={styles.purchase}
+            <ProductTitle>{product.title}</ProductTitle>
+            <MainBodyText>{product.description}</MainBodyText>
+            <ProductPrice>£{product.price}</ProductPrice>
+            <Button
               value={product.price}
               onClick={e => {
                 setTotalCost(Number(e.target.value));
@@ -33,16 +38,18 @@ const ProductsHomepage = ({ setTotalCost, addItem }) => {
               }}
             >
               Buy
-            </button>
+            </Button>
             {purchased ? (
-              <p>{product.title} has been added to your basket!</p>
+              <MainBodyText>
+                {product.title} has been added to your basket!
+              </MainBodyText>
             ) : (
               <></>
             )}
           </div>
         );
       })}
-    </div>
+    </ProductCard>
   );
 };
 
