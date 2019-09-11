@@ -1,23 +1,23 @@
 import React from "react";
 import { Link } from "@reach/router";
-import styles from "./Navbar.module.css";
+import { Nav, Navlink } from "../components/NavbarStyledComponents";
 
 const Navbar = () => {
   return (
-    <nav className={styles.container}>
-      <div>
-        <Link to="/" className={styles.link}>
-          Products
-        </Link>
-        <Link to="/basket" className={styles.link}>
+    <Nav>
+      <Link to="/" style={{ textDecoration: "none" }}>
+        <Navlink>Products</Navlink>
+      </Link>
+      <Link to="/basket">
+        <Navlink>
           <span
             className="iconify"
             data-icon="fa:shopping-bag"
             data-inline="false"
           ></span>
-        </Link>
-      </div>
-    </nav>
+        </Navlink>
+      </Link>
+    </Nav>
   );
 };
 
