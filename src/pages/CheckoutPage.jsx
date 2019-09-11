@@ -7,6 +7,7 @@ import {
   TotalCost
 } from "../components/styled-components/CheckoutPageStyledComps";
 import Button from "../components/styled-components/Button";
+import { Link } from "@reach/router";
 
 const CheckoutPage = ({ totalCost, cart, deleteItem }) => {
   return (
@@ -26,7 +27,9 @@ const CheckoutPage = ({ totalCost, cart, deleteItem }) => {
           </Basket>
         );
       })}
-      <Button style={{ margin: "10px 0 0 20px" }}>Checkout</Button>
+      <Link to="/payment">
+        <Button style={{ margin: "10px 0 0 20px" }}>Checkout</Button>
+      </Link>
     </div>
   );
 };

@@ -4,6 +4,7 @@ import { Router } from "@reach/router";
 import ProductsHomepage from "./pages/ProductsHomepage";
 import Navbar from "./components/Navbar";
 import CheckoutPage from "./pages/CheckoutPage";
+import PaymentPage from "./pages/PaymentPage";
 
 function App() {
   //state
@@ -60,6 +61,8 @@ function App() {
           totalCost={totalCost}
           deleteItem={deleteItem}
         />
+
+        <PaymentPage path="/payment" />
       </Router>
     </>
   );
