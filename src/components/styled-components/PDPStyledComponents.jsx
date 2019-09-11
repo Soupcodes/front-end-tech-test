@@ -1,14 +1,5 @@
 import styled from "styled-components";
 
-const Button = styled.button`
-  font-size: 0.6rem;
-  border-radius: 5px;
-  padding: 5px 8px;
-  &:hover {
-    background: #e60059;
-  }
-`;
-
 const ProductCard = styled.div`
   border: solid 5px #e60059;
   margin: 20px;
@@ -32,8 +23,16 @@ const MainBodyText = styled.h3`
   font-size: 12px;
 `;
 
-const ProductPrice = styled.h4`
+const ProductPrice = styled.span`
   font-size: 12px;
+  margin-right: 30px;
+  font-weight: bold;
 `;
 
-export { Button, ProductCard, ProductTitle, MainBodyText, ProductPrice };
+const ProductQty = styled.span`
+  font-size: 12px;
+  margin-right: 80px;
+  font-weight: bold;
+`;
+
+export { ProductCard, ProductTitle, MainBodyText, ProductPrice, ProductQty };
