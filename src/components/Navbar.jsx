@@ -1,6 +1,9 @@
 import React from "react";
 import { Link } from "@reach/router";
-import { Nav, Navlink } from "../components/NavbarStyledComponents";
+import {
+  Nav,
+  Navlink
+} from "../components//styled-components/NavbarStyledComponents";
 
 const Navbar = () => {
   return (
